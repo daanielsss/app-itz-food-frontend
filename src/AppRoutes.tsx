@@ -11,12 +11,12 @@ const AppRoutes = () =>{
     return (
         <Routes>
             <Route path='/' element={
-                                <Layout showHero={true}>
-                                    <HomePage/>
-                                </Layout>
-                            }/>
+                <Layout showHero={true}>
+                    <HomePage/>
+                </Layout>
+            }/>
             <Route path='/auth-callback' element={<AuthCallBackPage/>}/>
-            
+
             {/*Ruta sin protección*/}
             <Route
                 path="/search/:city"
@@ -26,22 +26,22 @@ const AppRoutes = () =>{
                     </Layout>
                 }
             />
-            
+
             {/* Protección de rutas */}
             <Route element={<ProtectedRoute />}>
-                <Route path='/user-profile' 
-                    element={
-                        <Layout>
-                            <UserProfilePage />
-                        </Layout>
-                    }
+                <Route path='/user-profile'
+                       element={
+                           <Layout>
+                               <UserProfilePage />
+                           </Layout>
+                       }
                 />
-                <Route path='/manage-restaurant' 
-                    element={
-                        <Layout>
-                            <ManageRestaurantPage />
-                        </Layout>
-                    }
+                <Route path='/manage-restaurant'
+                       element={
+                           <Layout>
+                               <ManageRestaurantPage />
+                           </Layout>
+                       }
                 />
             </Route>
             <Route path='*' element={<Navigate to="/" />}/>

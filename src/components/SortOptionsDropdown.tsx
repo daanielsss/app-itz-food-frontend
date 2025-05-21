@@ -1,10 +1,10 @@
-import React from "react";
+//import React from "react";
 import { Button } from "./ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { DropdownMenuItem } from "@radix-ui/react-dropdown-menu";
 
 type Props = {
-    onChange: () => void;
+    onChange: (value: string) => void;
     sortOption: string;
 }
 
